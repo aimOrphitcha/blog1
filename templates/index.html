@@ -1,0 +1,12 @@
+{% for blog in blog_list %}
+	<p>{{blog.title}}</p>
+	<p>{{blog.content}}</p>
+	<p>{{blog.pub_date}}</p>
+	<br>
+{% endfor %}
+
+<form action="/" method="post"> 
+	{% csrf_token %}
+	{{blogpost_form}}
+<input type="submit" value="Submit"/>
+</form>
